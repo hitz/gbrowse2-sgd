@@ -1,4 +1,5 @@
 @import url('gbrowse_autocomplete.css');
+@import url('header_footer.css');
 
 /* These are basic CSS rules shared by other stylesheets */
 A:link            { text-decoration: none; 

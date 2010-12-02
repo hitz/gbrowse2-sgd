@@ -1,0 +1,120 @@
+/* style necessary for sgd headers and footers, needs to be independent */
+img {border: 0;	}
+
+
+/* GLOBALS - ARE USED REPEATEDLY BY FILES THAT use Site.css */
+
+ul {padding-top: 0; padding-bottom: 0}
+
+hr { padding: 1px; }
+
+div.float {
+	float: left;
+}
+
+div.float_r {
+	float: right;
+}
+
+ul.float {
+	float: left;
+}
+
+.inline * { display: inline; }
+
+li.inline  { list-style: none; }
+
+/* <div class="spacer"></div> (no content) can be used to gap things or clear floats */
+
+div.spacer {
+        padding: 1px 0px;
+	clear: both;
+	position: relative;
+	
+}
+
+	
+/* Header and toolbar specific classes and ids */
+
+#header_top {
+    	width: 100%;
+	min-width: 960px;
+}
+
+#logo { width: 5%;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+
+#quicksearch {
+	width: 35%;
+	font-weight: bold;
+	margin: 0;
+	padding: 10px 0 12px 0;
+}
+
+#nav_aid {
+    	font-weight: bold;
+	padding: 12px 0 10px 0px;
+	margin:0;
+}
+
+#nav_aid ul {
+	padding: 0;
+	margin: 0;
+}
+
+#tool_bar {
+	clear: both;
+        float: left;
+	width: 100%; 
+	min-width: 960px;
+	margin: 0;
+	background-color: #FFDEAD;
+	font-size: 10pt;
+	}
+
+#tool_bar ul {
+	height: 14px;
+	padding: 2px 0;
+	display: block;
+	margin: 0;
+}
+
+#tool_bar ul li { 
+	margin:0;
+	padding: 0 14px;
+	vertical-align: bottom;
+}
+
+#footer {
+	width: 100%;
+	min-width: 700px;
+	clear: both;
+	}
+
+#footer p{
+	display: block;
+	font-size: 8pt;
+}
+
+
+span.right {
+	float: right;
+	text-align: right;
+	width: 50%
+	}
+	
+span.left {
+	float: left;
+	width: 50%;
+	text-align: left;
+	}
+
+span.hilite { 
+             font-weight: bold;
+             color:  black;
+             background-color: #ffff66;
+}
+

@@ -90,6 +90,15 @@ conf/submitter_plugin.conf
 conf/synteny/oryza.synconf.disabled
 conf/synteny/rice_synteny.conf
 conf/synteny/wild_rice_synteny.conf
+conf/gbrowse_conf/scgenome-miniclone.conf
+conf/gbrowse_conf/scgenome-minimap.conf
+conf/gbrowse_conf/scgenome-miniseq.conf
+conf/gbrowse_conf/scgenome.conf
+conf/gbrowse_conf/scproteome.conf
+conf/gbrowse_conf/scproteome_signalp.conf
+conf/gbrowse_conf/scproteome_tmhmm.conf
+conf/gbrowse_conf/yeast_1+2_db.conf
+conf/gbrowse_conf/yeast_combo.conf
 conf/themes/solid_gray_colors
 conf/themes/transparent_colors
 conf/themes/warm_colors
@@ -197,7 +206,9 @@ htdocs/css/dropdown/images/nav-arrow-up.png
 htdocs/css/dropdown/images/pattern1.png
 htdocs/css/dropdown/images/pattern2.png
 htdocs/css/dropdown/images/pattern3.png
+htdocs/images/openid/google-logo.gif
 htdocs/css/gbrowse.css
+htdocs/css/header_footer.css
 htdocs/css/gbrowse_autocomplete.css
 htdocs/css/gbrowse_elements.css
 htdocs/css/gbrowse_solid.css

@@ -513,9 +513,9 @@ sub process_conf_files {
 	    (my $new = $base) =~ s/^conf\///;
 	    my $installed = File::Spec->catfile($install_path,$new);
 	    if (-e $installed && $base =~ /\.conf$/ && (compare($base,$installed) != 0)) {
-		warn "$installed conf file is already installed. New version will be installed as $installed.new\n";
-		copy ("blib/$base","blib/$base.new");
-		print $skip '^',"blib/",quotemeta($base),'$',"\n";
+		warn "$installed conf file is already installed. Old version will be copied to $installed.old\n";
+		copy ("$installed","$installed.old");
+		#print $skip '^',"blib/",quotemeta($base),'$',"\n";
 	    }
 	}
     }
@@ -526,17 +526,33 @@ sub process_conf_files {
 sub process_htdocs_files {
     my $self = shift;
     my $f    = IO::File->new('MANIFEST');
+    
+    my $install_path = $self->config_data('htdocs');
+	$install_path .= '/css';
+    my $skip;
+
     while (<$f>) {
 	next unless m!^htdocs/!;
 	chomp;
+	my $base = $_;
+	
 	my $copied = $self->copy_if_modified($_=>'blib');
 	$self->substitute_in_place("blib/$_")
 	    if $copied
 	    or !$self->up_to_date('_build/config_data',"blib/$_");
-# was  trying to do something about localizing installed perl, but forget what it was
-#	if (/\.pl$/ && $copied) {
-#	    
-#	}
+
+	# hack to copy css files that may be modified
+ 	if ($copied) {
+	    $skip ||= IO::File->new('>>INSTALL.SKIP');
+	    (my $new = $base) =~ s/^css\///;
+	    my $installed = File::Spec->catfile($install_path,$new);
+	    if (-e $installed && $base =~ /\.conf$/ && (compare($base,$installed) != 0)) {
+		warn "$installed css file is already installed. Old version will be copied to $installed.old\n";
+		copy ("$installed","$installed.old");
+		#print $skip '^',"blib/",quotemeta($base),'$',"\n";
+	    }
+ 	    
+ 	}
     }
 }
 
