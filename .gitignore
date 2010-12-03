@@ -1,0 +1,8 @@
+.project
+Build
+INSTALL.SKIP
+MYMETA.yml
+_build/
+blib/
+lib/Bio/Graphics/Browser2/CAlign.c
+lib/Bio/Graphics/Browser2/CAlign.o

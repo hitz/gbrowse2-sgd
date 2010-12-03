@@ -1,0 +1,18 @@
+[scgenome:database]
+description	= S. cerevisiae from Saccharomyces Genome Database (SGD)
+db_adaptor	= Bio::DB::SeqFeature::Store
+db_args		= -adaptor DBI::mysql
+		  -dsn dbi:mysql:scgenome
+                  -user selector
+ 		  -pass pet1Flew
+search options = default +autocomplete
+
+[encode:database]
+description	= S. cerevisiae from Saccharomyces Genome Database (SGD)
+db_adaptor	= Bio::DB::SeqFeature::Store
+db_args		= -adaptor DBI::mysql
+		  -dsn dbi:mysql:encode
+                  -user selector
+ 		  -pass pet1Flew
+search options = default +autocomplete
+
