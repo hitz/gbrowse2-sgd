@@ -6,3 +6,4 @@ _build/
 blib/
 lib/Bio/Graphics/Browser2/CAlign.c
 lib/Bio/Graphics/Browser2/CAlign.o
+Makefile
