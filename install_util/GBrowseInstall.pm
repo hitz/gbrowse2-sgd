@@ -644,12 +644,19 @@ sub process_database_files {
     my $self = shift;
     my $f    = IO::File->new('MANIFEST');
     while (<$f>) {
-	next unless m!^sample_data/!;
-	chomp;
-        my $dest = $_;  $dest =~ s|^sample_data/||;
+	if (m!^sample_data!){
+		chomp;
+        my $dest = $_;  $dest =~ s!^sample_data!!;
         $self->copy_if_modified(from => $_,
                                 to   => "blib/databases/$dest",
                                );
+	} elsif (m!^data!){
+		chomp;
+        my $dest = $_;  $dest =~ s!^data/!!;
+        $self->copy_if_modified(from => $_,
+                                to   => "blib/cgi-bin/$dest",
+                               );
+	}
     }
 }
 
