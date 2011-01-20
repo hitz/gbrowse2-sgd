@@ -94,6 +94,7 @@ conf/gbrowse_conf/scgenome-miniclone.conf
 conf/gbrowse_conf/scgenome-minimap.conf
 conf/gbrowse_conf/scgenome-miniseq.conf
 conf/gbrowse_conf/scgenome.conf
+conf/gbrowse_conf/Gbrowse.initcode.conf
 conf/gbrowse_conf/scproteome.conf
 conf/gbrowse_conf/scproteome_signalp.conf
 conf/gbrowse_conf/scproteome_tmhmm.conf

@@ -9,3 +9,8 @@ lib/Bio/Graphics/Browser2/CAlign.o
 Makefile
 .DS_Store
 conf/.DS_Store
+conf/#*#
+conf/*~
+conf/gbrowse_conf/#*#
+conf/gbrowse_conf/.#*
+conf/gbrowse_conf/*~
