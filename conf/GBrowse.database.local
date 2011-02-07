@@ -1,0 +1,22 @@
+[scgenome:database]
+description	= S. cerevisiae from Saccharomyces Genome Database (SGD)
+db_adaptor	= Bio::DB::SeqFeature::Store
+db_args		= -adaptor DBI::mysql
+		  -dsn dbi:mysql:scgenome;host=localhost;mysql_socket=/db0/mysql/admin/gbrowse/mysql.sock
+                  -user selector
+ 		  -pass pet1Flew
+search options = default +autocomplete
+
+[encode:database]
+description	= S. cerevisiae from Saccharomyces Genome Database (SGD)
+db_adaptor	= Bio::DB::SeqFeature::Store
+db_args		= -adaptor DBI::mysql
+		  -dsn dbi:mysql:encode;host=localhost;mysql_socket=/db0/mysql/admin/gbrowse/mysql.sock
+                  -user selector
+ 		  -pass pet1Flew
+search options = default +autocomplete
+
+[Steinmetz_PolII_BigWig:database] 
+db_adaptor    = Bio::DB::BigWigSet
+db_args       = -dir /data/gbrowse/Steinmetz_2006_BigWig
+
